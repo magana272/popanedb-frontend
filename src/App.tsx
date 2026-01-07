@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
+import ErrorBoundary from './components/common/ErrorBoundary';
+import { PopaneProvider } from './context/PopaneContext';
+import { ThemeProvider } from './context/ThemeContext';
 
-function App() {
+const HomePage = lazy(() => import('./home/HomePage'));
+
+const AppLoader = () => (
+  <div className="app-loader">
+    <div className="loader-spinner"></div>
+    <span className="loader-text">Loading POPANE...</span>
+  </div>
+);
+
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <PopaneProvider>
+          <Suspense fallback={<AppLoader />}>
+            <HomePage />
+          </Suspense>
+        </PopaneProvider>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 

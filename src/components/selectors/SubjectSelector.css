@@ -1,0 +1,131 @@
+.subject-selector {
+    padding: 15px 20px;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    margin: 10px 0;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.study-selector h2 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+.subject-selector h3 {
+    margin: 0 0 12px 0;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.subject-selector.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.quick-select {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.quick-select button {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quick-select button:hover {
+    border-color: var(--accent-blue);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.quick-select button.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.subject-list-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--bg-secondary);
+}
+
+.subject-checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.subject-checkbox:last-child {
+    border-bottom: none;
+}
+
+.subject-checkbox:hover {
+    background: var(--bg-tertiary);
+}
+
+.subject-checkbox.selected {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.subject-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--accent-blue);
+}
+
+.subject-label {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.record-count {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+}
+
+.subject-count {
+    margin: 10px 0 0 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}

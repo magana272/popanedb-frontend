@@ -1,0 +1,220 @@
+.physiology-chart {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.physiology-chart.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: var(--text-secondary);
+}
+
+.chart-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px 20px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.control-group > label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.control-group select {
+    padding: 8px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    min-width: 150px;
+}
+
+.control-group select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.button-group {
+    display: flex;
+    gap: 4px;
+}
+
+.button-group button {
+    padding: 8px 14px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.button-group button:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.button-group button:last-child {
+    border-radius: 0 6px 6px 0;
+}
+
+.button-group button.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.button-group button:hover:not(.active) {
+    background: var(--bg-tertiary);
+}
+
+.column-selector {
+    flex: 1;
+    min-width: 200px;
+}
+
+.column-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 16px;
+    background: var(--bg-tertiary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkbox-label input {
+    display: none;
+}
+
+.checkbox-label.checked {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent-blue);
+    font-weight: 500;
+}
+
+.checkbox-label:hover {
+    background: var(--bg-tertiary);
+    opacity: 0.8;
+}
+
+.checkbox-label.checked:hover {
+    background: rgba(59, 130, 246, 0.3);
+}
+
+.chart-wrapper {
+    padding: 10px;
+}
+
+/* Chart header with title and subject legend */
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.chart-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--accent-blue);
+}
+
+.subject-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.subject-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.subject-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+/* Multi-panel emotion layout */
+.emotion-panels {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.emotion-panel {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-height: 400px;
+}
+
+.emotion-panel:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.emotion-panel:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Emotion selector */
+.emotion-selector {
+    padding: 12px 20px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.emotion-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.emotion-selector-header label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.emotion-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.emotion-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}

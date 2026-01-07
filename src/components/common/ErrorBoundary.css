@@ -1,0 +1,185 @@
+.error-boundary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.error-content {
+    text-align: center;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 48px 40px;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.error-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px -10px rgba(239, 68, 68, 0.5);
+}
+
+.error-icon svg {
+    width: 36px;
+    height: 36px;
+    color: white;
+}
+
+.error-content h2 {
+    color: #f8fafc;
+    margin-bottom: 12px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.error-content > p {
+    color: #94a3b8;
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.error-details {
+    text-align: left;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.error-details summary {
+    cursor: pointer;
+    font-weight: 500;
+    color: #fca5a5;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+.error-details summary:hover {
+    color: #fecaca;
+}
+
+.error-details summary::marker {
+    color: #f87171;
+}
+
+.error-details[open] summary {
+    margin-bottom: 16px;
+}
+
+.error-details pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.8rem;
+    font-family: 'SF Mono', 'Fira Code', 'Monaco', monospace;
+    color: #fca5a5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.stack-trace {
+    margin-top: 12px;
+    font-size: 0.7rem !important;
+    max-height: 180px;
+    overflow-y: auto;
+    color: #94a3b8 !important;
+}
+
+.stack-trace::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stack-trace::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.stack-trace::-webkit-scrollbar-thumb {
+    background: rgba(239, 68, 68, 0.3);
+    border-radius: 3px;
+}
+
+.error-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.retry-button,
+.reload-button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.retry-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 20px -4px rgba(59, 130, 246, 0.5);
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px -4px rgba(59, 130, 246, 0.6);
+}
+
+.retry-button:active {
+    transform: translateY(0);
+}
+
+.reload-button {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.reload-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.reload-button:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

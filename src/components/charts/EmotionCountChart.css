@@ -1,0 +1,104 @@
+.emotion-count-chart {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.emotion-count-chart.loading,
+.emotion-count-chart.error,
+.emotion-count-chart.empty {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emotion-count-chart .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.emotion-count-chart .chart-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.emotion-count-chart .chart-header .subtitle {
+    font-size: 0.85rem;
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.emotion-count-chart .chart-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emotion-count-chart .total-emotions {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+    background: rgba(96, 165, 250, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+}
+
+.emotion-count-chart .error-message {
+    text-align: center;
+}
+
+.emotion-count-chart .error-message p {
+    color: #ef4444;
+    margin-bottom: 1rem;
+}
+
+/* Emotion Summary Grid */
+.emotion-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+.emotion-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.75rem;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.emotion-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.emotion-name {
+    color: var(--text-primary);
+}
+
+.emotion-count {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-left: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .emotion-count-chart .chart-header {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,327 @@
+.home-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-primary);
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.error-banner {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.error-banner button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #dc2626;
+    line-height: 1;
+}
+
+.controls-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.controls-row > * {
+    flex: 1;
+    min-width: 200px;
+}
+
+.view-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.view-controls > span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.view-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.view-buttons button {
+    padding: 10px 16px;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.view-buttons button:hover {
+    border-color: var(--accent-blue);
+}
+
+.view-buttons button.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.refresh-btn {
+    padding: 10px 20px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    align-self: center;
+    flex: 0 0 auto;
+    min-width: auto;
+}
+
+.refresh-btn:hover:not(:disabled) {
+    background: #16a34a;
+}
+
+.refresh-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+.placeholder-message {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.placeholder-message p {
+    font-size: 1.2rem;
+}
+
+.app-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--bg-tertiary);
+    padding: 24px 20px;
+}
+
+.app-footer .footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.app-footer .footer-about {
+    margin-bottom: 16px;
+}
+
+.app-footer .footer-about p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.app-footer .footer-citation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.app-footer .citation-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.app-footer .footer-citation em {
+    color: var(--accent-blue);
+    font-style: normal;
+}
+
+.app-footer .copyright {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .controls-row {
+        flex-direction: column;
+    }
+
+    .controls-row > * {
+        width: 100%;
+    }
+}
+
+/* Feature Analysis Section */
+.feature-section {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-section-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+}
+
+.feature-section-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.section-description {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.feature-charts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-chart-card {
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.feature-chart-card h3 {
+    margin: 0 0 16px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Feature Analysis Chart internal styles */
+.feature-analysis-chart .view-mode-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.feature-analysis-chart .view-mode-selector button {
+    padding: 8px 16px;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+.feature-analysis-chart .view-mode-selector button:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+
+.feature-analysis-chart .view-mode-selector button.active {
+    background: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+}
+
+.feature-analysis-chart .feature-summary {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.feature-analysis-chart .feature-summary h4 {
+    margin: 0 0 12px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.feature-analysis-chart table {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+}
+
+.feature-analysis-chart th {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Loading and error states */
+.feature-analysis-chart .loading,
+.feature-analysis-chart .error,
+.feature-analysis-chart .no-data,
+.power-spectrum-chart .loading,
+.power-spectrum-chart .error,
+.power-spectrum-chart .no-data {
+    padding: 40px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.feature-analysis-chart .error,
+.power-spectrum-chart .error {
+    color: #dc2626;
+    background: #fef2f2;
+    border-radius: 8px;
+}
+
+@media (min-width: 1200px) {
+    .feature-charts-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+}
