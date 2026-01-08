@@ -21,7 +21,7 @@ const SubjectCheckbox = memo(function SubjectCheckbox({
     isSelected: boolean;
     onToggle: (id: number, checked: boolean) => void;
     singleSelect?: boolean;
-}): JSX.Element {
+}): React.JSX.Element {
     const handleChange = useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
             onToggle(subject.id, e.target.checked);
@@ -51,7 +51,7 @@ const SubjectSelector = memo(function SubjectSelector({
     onSubjectSelect,
     loading = false,
     singleSelect = false,
-}: SubjectSelectorProps): JSX.Element {
+}: SubjectSelectorProps): React.JSX.Element {
     const handleCheckboxChange = useCallback(
         (subjectId: number, checked: boolean) => {
             if (singleSelect) {

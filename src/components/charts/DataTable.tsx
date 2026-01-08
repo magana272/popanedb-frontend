@@ -71,7 +71,7 @@ const DataTable = memo(function DataTable({
     data,
     columns,
     loading = false
-}: DataTableProps): JSX.Element {
+}: DataTableProps): React.JSX.Element {
     const ROWS_PER_PAGE = 25;
 
     const { searchTerm, setSearchTerm, filteredItems: filteredData } = useSearch(data);

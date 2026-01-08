@@ -19,7 +19,7 @@ const Card = memo(function Card({
     onClick,
     selected = false,
     hoverable = false,
-}: CardProps): JSX.Element {
+}: CardProps): React.JSX.Element {
     const classNames = [
         'card',
         selected ? 'card-selected' : '',
@@ -47,7 +47,7 @@ const CardHeader = memo(function CardHeader({
 }: {
     children: React.ReactNode;
     className?: string;
-}): JSX.Element {
+}): React.JSX.Element {
     return <div className={`card-header ${className}`}>{children}</div>;
 });
 
@@ -58,7 +58,7 @@ const CardBody = memo(function CardBody({
 }: {
     children: React.ReactNode;
     className?: string;
-}): JSX.Element {
+}): React.JSX.Element {
     return <div className={`card-body ${className}`}>{children}</div>;
 });
 
@@ -69,7 +69,7 @@ const CardFooter = memo(function CardFooter({
 }: {
     children: React.ReactNode;
     className?: string;
-}): JSX.Element {
+}): React.JSX.Element {
     return <div className={`card-footer ${className}`}>{children}</div>;
 });
 

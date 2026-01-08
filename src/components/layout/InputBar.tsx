@@ -5,7 +5,7 @@ interface inputProps {
     onClick: () => void;
 }
 
-export default function InputBar(props: inputProps): JSX.Element {
+export default function InputBar(props: inputProps): React.JSX.Element {
 return (
     <div>
         <form action="/submit_page.php" method="Get">

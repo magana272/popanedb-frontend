@@ -26,7 +26,7 @@ const Button = memo(function Button({
     disabled,
     className = '',
     ...props
-}: ButtonProps): JSX.Element {
+}: ButtonProps): React.JSX.Element {
     const classNames = [
         'btn',
         `btn-${variant}`,

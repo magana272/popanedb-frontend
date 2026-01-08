@@ -126,7 +126,7 @@ const EmotionChart = memo(function EmotionChart({
     studyNumber,
     subjectId,
     initialFeatures = ['ECG', 'EDA', 'SBP'],
-}: EmotionChartProps): JSX.Element {
+}: EmotionChartProps): React.JSX.Element {
     const { isDark } = useTheme();
     const [data, setData] = useState<EmotionColoredSignalsResponse | null>(null);
     const [loading, setLoading] = useState(false);

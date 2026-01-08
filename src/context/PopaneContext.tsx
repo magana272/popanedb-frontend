@@ -28,7 +28,7 @@ interface PopaneProviderProps {
     children: ReactNode;
 }
 
-export function PopaneProvider({ children }: PopaneProviderProps): JSX.Element {
+export function PopaneProvider({ children }: PopaneProviderProps): React.JSX.Element {
     const [selectedStudy, setSelectedStudyState] = useState<number | null>(null);
     const [selectedSubjects, setSelectedSubjects] = useState<number[]>([]);
     const [subjects, setSubjects] = useState<SubjectInfo[]>([]);

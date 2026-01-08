@@ -15,7 +15,7 @@ const LoadingSpinner = memo(function LoadingSpinner({
     size = 'medium',
     message,
     fullScreen = false,
-}: LoadingSpinnerProps): JSX.Element {
+}: LoadingSpinnerProps): React.JSX.Element {
     const containerClass = fullScreen ? 'spinner-fullscreen' : 'spinner-container';
 
     return (

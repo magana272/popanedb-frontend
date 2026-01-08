@@ -13,7 +13,7 @@ const AppLoader = () => (
   </div>
 );
 
-function App(): JSX.Element {
+function App(): React.JSX.Element {
   return (
     <ThemeProvider>
       <ErrorBoundary>

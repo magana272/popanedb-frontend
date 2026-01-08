@@ -36,7 +36,7 @@ const PCAChart = memo(function PCAChart({
     studyNumber,
     subjectIds,
     initialFeatures = ['ECG', 'EDA', 'SBP', 'DBP'],
-}: PCAChartProps): JSX.Element {
+}: PCAChartProps): React.JSX.Element {
     const { isDark } = useTheme();
     const [data, setData] = useState<PCAResponse | null>(null);
     const [loading, setLoading] = useState(false);

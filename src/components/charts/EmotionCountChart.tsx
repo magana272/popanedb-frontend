@@ -21,7 +21,7 @@ interface EmotionCountChartProps {
 const EmotionCountChart = memo(function EmotionCountChart({
     studyNumber,
     subjectIds,
-}: EmotionCountChartProps): JSX.Element {
+}: EmotionCountChartProps): React.JSX.Element {
     const { isDark } = useTheme();
     const [emotionCounts, setEmotionCounts] = useState<EmotionCount[]>([]);
     const [loading, setLoading] = useState(false);

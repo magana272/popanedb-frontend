@@ -204,7 +204,7 @@ const PhysiologyChart = memo(function PhysiologyChart({
     columns,
     title,
     loading = false
-}: PhysiologyChartProps): JSX.Element {
+}: PhysiologyChartProps): React.JSX.Element {
     const { isDark } = useTheme();
     const [selectedColumns, setSelectedColumns] = useState<string[]>(['ECG']);
     const [chartType, setChartType] = useState<ChartType>('line');

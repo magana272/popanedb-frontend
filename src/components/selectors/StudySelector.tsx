@@ -16,7 +16,7 @@ const StudyCard = memo(function StudyCard({
     study: StudyMetadata;
     isSelected: boolean;
     onSelect: (studyNumber: number) => void;
-}): JSX.Element {
+}): React.JSX.Element {
     const handleClick = useCallback(() => {
         onSelect(study.studyNumber);
     }, [study.studyNumber, onSelect]);
@@ -49,7 +49,7 @@ const StudyCard = memo(function StudyCard({
 const StudySelector = memo(function StudySelector({
     selectedStudy,
     onStudySelect,
-}: StudySelectorProps): JSX.Element {
+}: StudySelectorProps): React.JSX.Element {
     return (
         <div className="study-selector">
             <h2>Select a Study</h2>
